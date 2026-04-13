@@ -127,21 +127,43 @@ The app is fully responsive and works beautifully on:
 - 💻 Desktops
 - 🖥️ Large screens
 
-## 🚀 Deployment to Vercel
+## 🚀 Deployment to Vercel (Free)
 
-1. Push your code to GitHub
+### Quick Deploy Steps:
 
-2. Go to [vercel.com](https://vercel.com)
+1. **Push code to GitHub** ✅ (Already done!)
 
-3. Click "New Project"
+2. **Sign up/Login to Vercel**:
+   - Go to [vercel.com](https://vercel.com)
+   - Click "Sign Up" and connect with GitHub
 
-4. Import your GitHub repository
+3. **Create New Project**:
+   - Click "New Project"
+   - Select your GitHub repository (`AuruduGame`)
+   - Vercel will auto-detect Vite configuration
 
-5. Vercel will auto-detect Vite and configure:
-   - Build Command: `npm run build`
-   - Output Directory: `dist`
+4. **Environment Variables** (if needed):
+   - Firebase config is built into the code
+   - No additional env variables needed for basic setup
 
-6. Deploy! 🎉
+5. **Deploy**:
+   - Click "Deploy"
+   - Wait for build to complete
+   - Your app is now live! 🎉
+
+### What's Configured for Free Tier:
+
+✅ SPA routing (Single Page App)  
+✅ Static asset caching (1 year for versioned files)  
+✅ HTML caching (1 hour)  
+✅ Automatic Git integration  
+✅ Custom domain support  
+✅ HTTPS by default  
+✅ Serverless functions ready  
+
+Your site will be live at: `https://aurudu-game.vercel.app` (or custom domain)
+
+---
 
 ## 📂 Project Structure
 
