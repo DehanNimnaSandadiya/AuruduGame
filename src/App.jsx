@@ -15,7 +15,7 @@ function App() {
             </div>
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-black text-white drop-shadow-lg mb-2" style={{textShadow: '3px 3px 6px rgba(139, 69, 19, 0.8)'}}>
-                🎊 Aurudu Leaderboard 🎊
+                Aurudu Leaderboard
               </h1>
               <p className="text-white text-lg md:text-xl font-bold drop-shadow-md">
                 Festival Food Challenge Champion!
@@ -32,13 +32,6 @@ function App() {
             <Route path="/leaderboard" element={<Leaderboard />} />
           </Routes>
         </main>
-
-        {/* Footer with Credits */}
-        <footer className="bg-white border-t border-gray-200 py-4 px-4 mt-8">
-          <div className="max-w-5xl mx-auto text-center text-gray-600 text-sm">
-            <p>Built by <span className="font-semibold text-gray-800">Dehan Nimna Sandadiya</span></p>
-          </div>
-        </footer>
       </div>
     </Router>
   );

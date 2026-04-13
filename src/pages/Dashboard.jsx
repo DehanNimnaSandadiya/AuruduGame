@@ -100,7 +100,7 @@ function Dashboard() {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin text-6xl mb-4">🌀</div>
+          <div className="animate-spin text-2xl mb-4 text-orange-500">●</div>
           <p className="text-xl text-gray-700">Loading your dashboard...</p>
         </div>
       </div>
@@ -119,7 +119,7 @@ function Dashboard() {
           <h1 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-aurudu-orange to-aurudu-red mb-2">
             Your Aurudu Dashboard
           </h1>
-          <p className="text-xl text-gray-700">Welcome back, {userData.name}! 🎊</p>
+          <p className="text-xl text-gray-700">Welcome back, {userData.name}!</p>
         </div>
 
         {/* Fun Message Banner */}
@@ -140,8 +140,8 @@ function Dashboard() {
               out of {totalUsers} participants
             </p>
             {rank <= 3 && (
-              <div className="text-6xl mt-4">
-                {rank === 1 ? '🥇' : rank === 2 ? '🥈' : '🥉'}
+              <div className="text-lg mt-4 font-bold text-amber-600">
+                {rank === 1 ? 'GOLD' : rank === 2 ? 'SILVER' : 'BRONZE'}
               </div>
             )}
           </div>
@@ -154,7 +154,6 @@ function Dashboard() {
             <div className="text-center">
               <p className="text-gray-600 text-lg mb-2">Total Items Eaten</p>
               <p className="text-5xl font-bold text-purple-600">{userData.totalCount}</p>
-              <p className="text-3xl mt-2">🍽️</p>
             </div>
           </div>
 
@@ -166,7 +165,6 @@ function Dashboard() {
                 {userData.totalCalories.toLocaleString()}
               </p>
               <p className="text-sm text-gray-600 mt-2">kcal</p>
-              <p className="text-3xl mt-2">🔥</p>
             </div>
           </div>
         </div>
@@ -174,13 +172,12 @@ function Dashboard() {
         {/* Food Breakdown */}
         <div className="card">
           <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">
-            Your Food Breakdown 📊
+            Your Food Breakdown
           </h3>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {/* Kavum */}
             <div className="bg-gradient-to-br from-orange-100 to-orange-200 p-4 rounded-xl text-center">
-              <div className="text-4xl mb-2">🍩</div>
               <p className="font-semibold text-gray-800">Kavum</p>
               <p className="text-3xl font-bold text-orange-600">{userData.kavum}</p>
               <p className="text-sm text-gray-600">{userData.kavum * 150} kcal</p>
@@ -188,7 +185,6 @@ function Dashboard() {
 
             {/* Kokis */}
             <div className="bg-gradient-to-br from-yellow-100 to-yellow-200 p-4 rounded-xl text-center">
-              <div className="text-4xl mb-2">🌀</div>
               <p className="font-semibold text-gray-800">Kokis</p>
               <p className="text-3xl font-bold text-yellow-600">{userData.kokis}</p>
               <p className="text-sm text-gray-600">{userData.kokis * 80} kcal</p>
@@ -196,7 +192,6 @@ function Dashboard() {
 
             {/* Kiribath */}
             <div className="bg-gradient-to-br from-red-100 to-red-200 p-4 rounded-xl text-center">
-              <div className="text-4xl mb-2">🍚</div>
               <p className="font-semibold text-gray-800">Kiribath</p>
               <p className="text-3xl font-bold text-red-600">{userData.kiribath}</p>
               <p className="text-sm text-gray-600">{userData.kiribath * 200} kcal</p>
@@ -204,7 +199,6 @@ function Dashboard() {
 
             {/* Aluwa */}
             <div className="bg-gradient-to-br from-pink-100 to-pink-200 p-4 rounded-xl text-center">
-              <div className="text-4xl mb-2">🍬</div>
               <p className="font-semibold text-gray-800">Aluwa</p>
               <p className="text-3xl font-bold text-pink-600">{userData.aluwa}</p>
               <p className="text-sm text-gray-600">{userData.aluwa * 120} kcal</p>
@@ -218,13 +212,13 @@ function Dashboard() {
             onClick={() => navigate('/')}
             className="btn-primary"
           >
-            ➕ Add More Food
+            Add More Food
           </button>
           <button
             onClick={() => navigate('/leaderboard')}
             className="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200"
           >
-            🏆 View Leaderboard
+            View Leaderboard
           </button>
         </div>
       </div>
