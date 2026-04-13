@@ -1,7 +1,10 @@
 {
+  "version": 2,
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "devCommand": "npm run dev",
+  "env": {},
+  "envPrefix": "VITE_",
   "rewrites": [
     {
       "source": "/(.*)",
@@ -10,7 +13,16 @@
   ],
   "headers": [
     {
-      "source": "/assets/(.*)",
+      "source": "/static/(.*)$",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/assets/(.*)$",
       "headers": [
         {
           "key": "Cache-Control",
@@ -27,5 +39,10 @@
         }
       ]
     }
-  ]
+  ],
+  "functions": {
+    "api/**/*.js": {
+      "maxDuration": 10
+    }
+  }
 }
